@@ -85,7 +85,8 @@
           <fieldset class="feedback-form__fieldset fieldset-impression">
             <legend class="feedback-form__legend">Ваше общее впечатление:</legend>
             <div class="fieldset-impression__block">
-              <input type="radio" id="impression-positive" name="fieldset-impression" value="impression-positive" checked>
+              <input type="radio" id="impression-positive" name="fieldset-impression" value="impression-positive"
+                checked>
               <label for="impression-positive">Скорее положительное</label>
               <input type="radio" id="impression-negative" name="fieldset-impression" value="impression-negative">
               <label for="impression-negative">Скорее отрицательное</label>
@@ -125,6 +126,27 @@
           <button class="feedback-form__button" type="submit">Отправить отзыв</button>
         </form>
       </div>
+    </section>
+    <section class="modal-success">
+      <header class="modal-success__header page-title">
+        <h2 class="page-title__header">Ваш отзыв отправлен!</h2>
+        <p class="page-title__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+          опубликуем его на сайте.
+        </p>
+      </header>
+      <p class="modal-success__button-container">
+        <button class="modal-success__button" type="button">Закрыть окно</button>
+      </p>
+    </section>
+    <section class="modal-failure">
+      <header class="modal-failure__header page-title">
+        <h2 class="page-title__header">Что-то пошло не так!</h2>
+        <p class="page-title__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+      </header>
+      <p class="modal-failure__button-container">
+        <button class="modal-failure__button" type="button">Ок</button>
+      </p>
     </section>
   </main>
   <footer class="page-footer">
