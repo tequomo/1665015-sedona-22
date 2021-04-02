@@ -1,0 +1,59 @@
+.features {
+  padding: 35px 20px;
+}
+
+.features__list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  }
+
+.features__item {
+  text-align: left;
+  padding-left: 51px;
+  position: relative;
+
+  &--living .features__header::before {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    content: "";
+    width: 39px;
+    height: 37px;
+    background-image: url(../../img/icons/icon-house.svg);
+  }
+
+  &--present .features__header::before {
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    content: "";
+    width: 32px;
+    height: 38px;
+    background-image: url(../../img/icons/icon-gift.svg);
+  }
+
+  &--meal .features__header::before {
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    content: "";
+    width: 40px;
+    height: 35px;
+    background-image: url(../../img/icons/icon-burger.svg);
+  }
+}
+
+.features__header {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px;
+  padding-bottom: 15px;
+}
+
+.features__desc {
+  margin: 0px;
+  padding-bottom: 10px;
+  color: @color-dark-charcoal;
+  font-size: 14px;
+}

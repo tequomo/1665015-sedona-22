@@ -1,1 +1,27 @@
-// Начните писать стили здесь
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@import "global/fonts.less";
+@import "global/variables.less";
+@import "blocks/page-body.less";
+@import "blocks/container.less";
+@import "blocks/page-header.less";
+@import "blocks/navigation.less";
+@import "blocks/intro.less";
+@import "blocks/advantages.less";
+@import "blocks/section-title.less";
+@import "blocks/features.less";
+@import "blocks/booking-search.less";
+@import "blocks/page-footer.less";
+@import "blocks/socials.less";
+
