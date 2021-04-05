@@ -15,4 +15,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover,
+  &:focus {
+    background-color: @color-cerulean-frost;
+  }
+
+  &:active {
+    background-color: @color-silver-lake-blue;
+  }
+
+  &:active path {
+    fill: @color-white-opacity;
+  }
 }
