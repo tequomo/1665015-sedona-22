@@ -12,3 +12,16 @@
   text-transform: uppercase;
   background-color: @color-white;
 }
+
+@media (min-width: @tablet-width) {
+  .page-body {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body {
+    min-width: 1200px;
+    background-color: @color-bright-gray;
+  }
+}
