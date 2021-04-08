@@ -14,3 +14,21 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .intro {
+    background-image: url("../img/intro-background-middle.jpg");
+    min-height: 518px;
+  }
+
+  .intro__logo {
+    width: 461px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    background-image: url("../img/intro-background-big.jpg");
+  }
+}

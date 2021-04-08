@@ -57,3 +57,75 @@
   color: @color-dark-charcoal;
   font-size: 14px;
 }
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features__item {
+    text-align: center;
+    padding: 100px 20px 0;
+    position: relative;
+
+    &--living .features__header::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      content: "";
+      width: 37px;
+      height: 39px;
+      background-image: url("../img/icons/icon-house.svg");
+    }
+
+    &--present .features__header::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      content: "";
+      width: 32px;
+      height: 38px;
+      background-image: url("../img/icons/icon-gift.svg");
+    }
+
+    &--meal .features__header::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      content: "";
+      width: 40px;
+      height: 35px;
+      background-image: url("../img/icons/icon-burger.svg");
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+
+  .features__header {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  .features__desc {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__header {
+    padding: 0 20px;
+  }
+
+  .features__desc {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 20px;
+  }
+}

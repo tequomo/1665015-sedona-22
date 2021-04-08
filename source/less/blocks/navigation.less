@@ -13,6 +13,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
   // display: none;
 }
 
@@ -39,4 +41,36 @@
 
 .navigation__toggle {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .navigation__list {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: @color-white;
+  }
+
+  .navigation__item {
+    background-color: @color-white;
+    box-shadow: none;
+    min-height: 56px;
+    min-width: 153px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+
+  .navigation__link {
+    color: @color-black;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .navigation__item {
+    min-width: 239px;
+  }
 }
