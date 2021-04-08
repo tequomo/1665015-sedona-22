@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона - оставьте свой отзыв!</title>
   <link rel="icon" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
@@ -40,8 +41,12 @@
         </div>
       </nav>
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logos/upper-logo.png" width="102" height="84"
-          alt="Логотип Седоны">
+        <picture class="page-header__picture">
+          <source srcset="img/logos/upper-logo-big.png" media="(min-width: 1200px)" width="187" hight="97">
+          <source srcset="img/logos/upper-logo-middle.png" media="(min-width: 768px)" width="102" hight="84">
+          <img class="page-header__logo-image" src="img/logos/upper-logo.png" width="102" height="84"
+            alt="Логотип Седоны">
+        </picture>
       </a>
     </header>
 
@@ -49,7 +54,10 @@
       <section class="intro">
         <div class="intro__wrapper">
           <h1 class="visually-hidden">Седона - форма обратной связи</h1>
-          <img class="intro__logo" src="img/logos/logo-small.png" width="229" height="39" alt="Вы всё еще в Седоне">
+          <picture>
+            <source srcset="img/logos/logo-middle.png" media="(min-width: 768px)" width="457" hight="78">
+            <img class="intro__logo" src="img/logos/logo-small.png" width="229" height="39" alt="Вы всё еще в Седоне">
+          </picture>
         </div>
       </section>
       <section class="feedback-form">
@@ -78,7 +86,7 @@
             <fieldset class="feedback-form__fieldset fieldset-contacts">
               <legend class="feedback-form__legend">Контактная информация:</legend>
               <p class="fieldset-contacts__line">
-                <label class="fieldset-contacts__label" for="contacts-phone">Телефон*:</label>
+                <label class="fieldset-contacts__label" for="contacts-phone">Контактный телефон*:</label>
                 <input class="fieldset-contacts__input" type="text" id="contacts-phone" placeholder="Введите телефон">
               </p>
               <p class="fieldset-contacts__line">
@@ -131,9 +139,11 @@
             </fieldset>
             <fieldset class="feedback-form__fieldset fieldset-emotions">
               <legend class="feedback-form__legend">Опишите свои эмоции:</legend>
-              <textarea class="fieldset-emotions__textarea" rows="10" cols="40" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="fieldset-emotions__textarea" rows="10" cols="40" name="emotions"
+                placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="feedback-form__button" type="submit">Отправить отзыв</button>
+            <p class="feedback-form__info">* — обязательные поля</p>
           </form>
         </div>
       </section>

@@ -1,6 +1,6 @@
 .fieldset-impression__line {
   font-size: 18px;
-  padding: 0 0 0 75px;
+  padding: 0 0 0 55px;
   margin: 0 0 20px 0;
   text-align: left;
 
@@ -10,5 +10,16 @@
     font-weight: 700;
     line-height: 26px;
     text-transform: initial;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .fieldset-impression__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fieldset-impression__line {
+    padding-bottom: 40px;
   }
 }

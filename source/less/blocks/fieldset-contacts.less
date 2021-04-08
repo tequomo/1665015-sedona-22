@@ -7,3 +7,40 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .fieldset-contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fieldset-contacts__input {
+    width: 100%;
+  }
+
+  .fieldset-contacts__label {
+    align-self: start;
+    padding-left: 22px;
+  }
+
+  .fieldset-contacts__line {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fieldset-contacts__line {
+    flex-direction: row;
+  }
+
+  .fieldset-contacts__label {
+    padding: 0;
+    white-space: nowrap;
+    align-self: center;
+  }
+}
