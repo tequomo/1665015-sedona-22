@@ -4,6 +4,10 @@
   border-bottom: 1px solid @color-platinum-vip;
 }
 
+.feedback-form__block {
+  padding: 0 20px;
+}
+
 .feedback-form__fieldset {
   border: none;
   border-bottom: 1px solid @color-platinum-vip;
@@ -20,7 +24,7 @@
     line-height: inherit;
     font-weight: 700;
     color: @color-black;
-    padding: 10px;
+    padding: 15px 22px;
     background-color: @color-anti-flash-white;
     border: 4px solid @color-anti-flash-white;
     height: 58px;
@@ -65,4 +69,71 @@
   vertical-align: middle;
   background-color: @color-dark-sky-blue;
   border: none;
+}
+
+.feedback-form__info {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-form__wrapper {
+    background-color: @color-white;
+  }
+
+  .feedback-form__header {
+    padding: 64px 165px;
+    border-bottom: none;
+    margin: 0;
+  }
+
+  .feedback-form__info {
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    color: @color-dark-charcoal;
+  }
+
+  .feedback-form__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+  }
+
+  .feedback-form__fieldset {
+    border-bottom: none;
+
+    &:nth-child(3) {
+      order: -1;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  .feedback-form__legend {
+    padding-bottom: 30px;
+    font-size: 21px;
+  }
+
+  .feedback-form__button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback-form__header {
+    padding: 110px 380px 50px;
+  }
+
+  .feedback-form__block {
+    padding: 0 120px;
+  }
+
+  .feedback-form__button {
+    width: 480px;
+  }
 }
