@@ -38,3 +38,45 @@
   font-weight: 700;
   margin-left: 8px;
 }
+
+@media (min-width: @tablet-width) {
+  .image-container__info {
+    background-color: @color-anti-flash-white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+
+  .image-container__photo {
+    width: 324px;
+    height: 267px;
+  }
+
+  .image-container__likes {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .image-container__photo {
+    width: 400px;
+    height: 267px;
+  }
+
+  .image-container__info {
+    line-height: 24px;
+    padding: 16px 20px;
+    background-color: @color-black-opacity;
+    color: @color-white;
+    margin-top: -80px;
+    position: relative;
+  }
+
+  .image-container__likes {
+    & path {
+      fill: @color-white;
+      opacity: 1;
+    }
+  }
+}
