@@ -20,3 +20,45 @@
   padding: 0;
   background-color: @color-anti-flash-white;
 }
+
+@media (min-width: @tablet-width) {
+  .video-box {
+    padding: 0 60px;
+  }
+
+  .video-box__header {
+    padding: 55px 100px 65px;
+  }
+
+  .video-box__video {
+    margin-bottom: 0;
+  }
+
+  .video-box__clip {
+    width: 648px;
+    height: 500px;
+  }
+
+  .video-box__controls {
+    margin: -93px 0 0 0;
+    padding: 35px;
+    height: 93px;
+    background-color: @color-black-opacity-low;
+    color: @color-white;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-box {
+    padding: 0 200px;
+    background-color: @color-white;
+  }
+
+  .video-box__clip {
+    width: 800px;
+    height: 500px;
+  }
+}

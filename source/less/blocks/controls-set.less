@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 20px;
 }
 
 .controls-set__subtitles {
@@ -49,5 +48,41 @@
 
   &:active path {
     fill: @color-dark-charcoal-opacity;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .controls-set__replay,
+  .controls-set__subtitles,
+  .controls-set__fullscreen {
+    & path {
+      fill: @color-white;
+    }
+
+    &:hover path,
+    &:focus path {
+      opacity: 0.6;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
+  }
+
+  .controls-set__replay {
+    padding: 0 40px 0 0;
+  }
+
+  .controls-set__playbar {
+    order: 0;
+    width: 389px;
+    height: 20px;
+    background-color: @color-transparent;
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+  .controls-set__fullscreen {
+    padding-right: 0;
   }
 }

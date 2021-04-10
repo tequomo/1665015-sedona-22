@@ -40,11 +40,18 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     background-color: @color-white;
+    padding: 25px 60px;
   }
 
   .page-footer__wrapper {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 25px 120px;
   }
 }
