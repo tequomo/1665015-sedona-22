@@ -133,10 +133,48 @@
     &:nth-child(even) {
       box-shadow: none;
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: inherit;
+    }
+
+    &:active {
+      & .navigation__link {
+        color: @color-black;
+        opacity: 0.3;
+      }
+    }
+
+    &--current {
+      & .navigation__link {
+        color: @color-deep-taupe;
+
+        &:hover {
+          color: @color-umber;
+        }
+
+        &:active {
+          color: @color-deep-taupe;
+          opacity: 0.3;
+        }
+      }
+    }
   }
 
   .navigation__link {
     color: @color-black;
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: @color-dark-sky-blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .navigation__toggle {
