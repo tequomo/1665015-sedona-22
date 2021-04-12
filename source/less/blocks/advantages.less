@@ -1,6 +1,17 @@
 .advantages__title {
   margin: 0;
   padding: 32px 25px 27px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/intro-bottom-shape.svg");
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+  }
 }
 
 .advantages__list {
@@ -58,6 +69,12 @@
 @media (min-width: @tablet-width) {
   .advantages {
     background-color: @color-white;
+  }
+
+  .advantages__title {
+    &::after {
+      content: none;
+    }
   }
 
   .advantages__photo {

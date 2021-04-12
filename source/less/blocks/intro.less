@@ -7,6 +7,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 320px;
+    height: 57px;
+    background-image: url("../img/intro-shape-small.svg");
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .intro__logo {
@@ -19,6 +29,12 @@
   .intro {
     background-image: url("../img/intro-background-middle.jpg");
     min-height: 518px;
+
+    &::after {
+      width: 768px;
+      height: 57px;
+      background-image: url("../img/intro-shape-middle.svg");
+    }
   }
 
   .intro__logo {
@@ -30,5 +46,11 @@
 @media (min-width: @desktop-width) {
   .intro {
     background-image: url("../img/intro-background-big.jpg");
+
+    &::after {
+      width: 1200px;
+      height: 57px;
+      background-image: url("../img/intro-shape-big.svg");
+    }
   }
 }

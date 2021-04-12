@@ -19,6 +19,7 @@
   width: 280px;
   height: 58px;
   font-size: 21px;
+  font-family: inherit;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
@@ -26,6 +27,20 @@
   vertical-align: middle;
   background-color: @color-dark-sky-blue;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @color-cerulean-frost;
+  }
+
+  &:active {
+    background-color: @color-silver-lake-blue;
+    color: @color-white-opacity;
+  }
+
+  &:disabled {
+    background-color: @color-platinum-vip;
+  }
 }
 
 @media (min-width: @tablet-width) {
