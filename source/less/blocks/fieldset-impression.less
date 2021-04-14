@@ -44,19 +44,20 @@
     border-color: @color-light-gray;
   }
 
-    & + label::after,
-    &:checked + label::after {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      border: 3px solid @color-dark-charcoal;
-      border-radius: 50%;
-      background-color: @color-dark-charcoal;
-      top: 4px;
-      left: -59px;
-      transition: all 0.2s;
-    }
+  & + label::after,
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid @color-dark-charcoal;
+    border-radius: 50%;
+    background-color: @color-dark-charcoal;
+    top: 4px;
+    left: -59px;
+    transition: all 0.2s;
+  }
+
   &:checked {
     &:hover + label::before,
     &:focus + label::before {
