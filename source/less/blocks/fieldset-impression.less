@@ -1,7 +1,7 @@
 .fieldset-impression__line {
   font-size: 18px;
-  padding: 0 0 0 55px;
-  margin: 0 0 20px 0;
+  padding: 0 0 0 74px;
+  margin: 0 0 40px 0;
   text-align: left;
 
   label {
@@ -10,6 +10,66 @@
     font-weight: 700;
     line-height: 26px;
     text-transform: initial;
+    position: relative;
+  }
+}
+
+.fieldset-impression__radio {
+  & + label,
+  &:checked + label {
+    cursor: pointer;
+  }
+
+  & + label::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 5px solid @color-anti-flash-white;
+    border-radius: 50%;
+    background-color: @color-anti-flash-white;
+    top: -11px;
+    left: -74px;
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    background-color: @color-platinum-vip;
+    border-color: @color-platinum-vip;
+  }
+
+  &:active + label::before {
+    background-color: @color-light-gray;
+    border-color: @color-light-gray;
+  }
+
+  &:checked {
+    & + label::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 3px solid @color-dark-charcoal;
+      border-radius: 50%;
+      background-color: @color-dark-charcoal;
+      top: 4px;
+      left: -59px;
+    }
+
+    &:hover + label::before,
+    &:focus + label::before {
+      background-color: @color-platinum-vip;
+    }
+
+    &:active {
+      & + label::after {
+        opacity: 0.3;
+      }
+
+      & + label::before {
+        background-color: @color-light-gray;
+      }
+    }
   }
 }
 
@@ -17,9 +77,24 @@
   .fieldset-impression__block {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 292px;
+      background-color: @color-gainsboro;
+      right: 0;
+      top: -70px;
+    }
   }
 
   .fieldset-impression__line {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -2,7 +2,20 @@
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+  display: flex;
+  width: 280px;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.fieldset-identity__input {
+  width: 100%;
+}
+
+.fieldset-identity__label {
+  padding-right: 15px;
+}
+
 
 @media (min-width: @tablet-width) {
   .fieldset-identity {
@@ -11,7 +24,13 @@
     align-items: flex-end;
   }
 
-  .fieldset-identity__input {
-    width: 240px;
+  .fieldset-identity__line {
+    width: 266px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-identity__line {
+    width: 400px;
   }
 }

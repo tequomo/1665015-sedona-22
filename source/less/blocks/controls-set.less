@@ -80,9 +80,42 @@
     background-color: @color-transparent;
     flex-grow: 0;
     flex-basis: auto;
+
+    & rect {
+      width: 389px;
+    }
+
+    & svg:last-of-type {
+      width: 389px;
+      position: relative;
+    }
+
+    & svg:first-of-type {
+      position: absolute;
+    }
   }
 
   .controls-set__fullscreen {
     padding-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls-set__playbar {
+    width: 540px;
+
+    & rect {
+      width: 540px;
+    }
+
+    & svg:last-of-type {
+      width: 540px;
+      position: relative;
+    }
+
+    & svg:first-of-type {
+      position: absolute;
+      left: 30%;
+    }
   }
 }
