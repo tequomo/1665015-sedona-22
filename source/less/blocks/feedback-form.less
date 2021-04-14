@@ -111,12 +111,47 @@
     &:nth-child(5) {
       grid-column-start: 1;
       grid-column-end: -1;
+
+      legend {
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 130px;
+          height: 1px;
+          background-color: @color-gainsboro;
+        }
+
+        &::before {
+          left: 335px;
+        }
+
+        &::after {
+          right: 335px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      legend {
+        &::before {
+          left: 320px;
+        }
+
+        &::after {
+          right: 320px;
+        }
+      }
     }
   }
 
   .feedback-form__legend {
     padding-bottom: 30px;
     font-size: 21px;
+    position: relative;
   }
 
   .feedback-form__button {
@@ -131,6 +166,41 @@
 
   .feedback-form__block {
     padding: 0 120px;
+  }
+
+  .feedback-form__fieldset {
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      legend {
+        &::before,
+        &::after {
+          width: 280px;
+          height: 1px;
+          background-color: @color-gainsboro;
+        }
+
+        &::before {
+          left: 335px;
+        }
+
+        &::after {
+          right: 335px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      legend {
+        &::before {
+          left: 320px;
+        }
+
+        &::after {
+          right: 320px;
+        }
+      }
+    }
   }
 
   .feedback-form__button {

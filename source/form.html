@@ -85,12 +85,14 @@
             </fieldset>
             <fieldset class="feedback-form__fieldset fieldset-contacts">
               <legend class="feedback-form__legend">Контактная информация:</legend>
-              <p class="fieldset-contacts__line">
-                <label class="fieldset-contacts__label" for="contacts-phone">Контактный телефон*:</label>
+              <p class="fieldset-contacts__line fieldset-contacts__line--phone">
+                <label class="fieldset-contacts__label fieldset-contacts__label--phone" for="contacts-phone"><span
+                    class="fieldset-contacts__hidden">Контактный </span>телефон*:</label>
                 <input class="fieldset-contacts__input" type="text" id="contacts-phone" placeholder="Введите телефон">
               </p>
-              <p class="fieldset-contacts__line">
-                <label class="fieldset-contacts__label" for="contacts-mail">Электронная почта*:</label>
+              <p class="fieldset-contacts__line fieldset-contacts__line--email">
+                <label class="fieldset-contacts__label fieldset-contacts__label--email" for="contacts-mail">Электронная
+                  почта*:</label>
                 <input class="fieldset-contacts__input" type="text" id="contacts-mail" placeholder="Введите e-mail">
               </p>
             </fieldset>
@@ -98,22 +100,24 @@
               <legend class="feedback-form__legend">Ваше общее впечатление:</legend>
               <div class="fieldset-impression__block">
                 <p class="fieldset-impression__line">
-                  <input type="radio" id="impression-positive" name="fieldset-impression" value="impression-positive"
-                    checked>
+                  <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-positive"
+                    name="fieldset-impression" value="impression-positive" checked>
                   <label for="impression-positive">Скорее положительное</label>
                 </p>
                 <p class="fieldset-impression__line">
-                  <input type="radio" id="impression-negative" name="fieldset-impression" value="impression-negative">
+                  <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-negative"
+                    name="fieldset-impression" value="impression-negative">
                   <label for="impression-negative">Скорее отрицательное</label>
                 </p>
                 <p class="fieldset-impression__line">
-                  <input type="radio" id="impression-not-sure" name="fieldset-impression" value="impression-not-sure">
+                  <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-not-sure"
+                    name="fieldset-impression" value="impression-not-sure">
                   <label for="impression-not-sure">Затрудняюсь ответить</label>
                 </p>
               </div>
             </fieldset>
             <fieldset class="feedback-form__fieldset fieldset-observed">
-              <legend class="feedback-form__legend">Посещенные достопримечательности:</legend>
+              <legend class="feedback-form__legend">Посещенные<br>достопримечательности:</legend>
               <ul class="fieldset-observed__block">
                 <li class="fieldset-observed__item">
                   <input class="visually-hidden fieldset-observed__checkbox" type="checkbox" name="observed-bridge"

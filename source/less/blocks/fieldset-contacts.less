@@ -6,7 +6,29 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
+
+  &--phone::after {
+    content: "";
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 26px;
+    right: 0;
+    background: @color-platinum-sedona url("../img/icons/icon-phone.svg") no-repeat center center;
+  }
+
+  &--email::after {
+    content: "";
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 26px;
+    right: 0;
+    background: @color-platinum-sedona url("../img/icons/icon-mail.svg") no-repeat center center;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .fieldset-contacts {
@@ -36,11 +58,20 @@
 
   .fieldset-contacts__line {
     flex-direction: row;
+
+    &--phone::after,
+    &--email::after {
+      top: 0;
+    }
   }
 
   .fieldset-contacts__label {
-    padding: 0;
+    padding: 0 16px 0 0;
     white-space: nowrap;
     align-self: center;
+  }
+
+  .fieldset-contacts__hidden {
+    display: none;
   }
 }
