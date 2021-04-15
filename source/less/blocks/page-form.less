@@ -5,6 +5,13 @@
   min-height: 214px;
 }
 
+@media (min-resolution: 2dppx) {
+  .page-form .intro {
+    background-image: url("../img/background-small@2x.jpg");
+    background-size: cover;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page-form .intro {
     background-image: url("../img/background-middle.jpg");
@@ -15,11 +22,25 @@
     width: 457px;
     height: 78px;
   }
+
+  @media (min-resolution: 2dppx) {
+    .page-form .intro {
+      background-image: url("../img/background-middle@2x.jpg");
+      background-size: cover;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-form .intro {
     background-image: url("../img/background-big.jpg");
     min-height: 357px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .page-form .intro {
+      background-image: url("../img/background-big@2x.jpg");
+      background-size: cover;
+    }
   }
 }
