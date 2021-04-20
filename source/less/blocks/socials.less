@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0;
   display: flex;
-  width: 155px;
+  width: 151px;
   justify-content: space-between;
   align-items: center;
 }
@@ -23,9 +23,27 @@
 
   &:active {
     background-color: @color-silver-lake-blue;
+
+    .socials__button-twitter,
+    .socials__button-facebook,
+    .socials__button-youtube {
+      fill: @color-white-opacity;
+    }
   }
 
   &:active path {
     fill: @color-white-opacity;
+  }
+}
+
+.socials__button-twitter,
+.socials__button-facebook,
+.socials__button-youtube {
+  fill: @color-white;
+}
+
+@media (min-width: @tablet-width) {
+  .socials {
+    margin: 0 12px 18px 0;
   }
 }
