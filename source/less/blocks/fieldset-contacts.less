@@ -5,15 +5,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   position: relative;
+
+  input[type="text"] {
+    width: 100%;
+  }
 
   &--phone::after {
     content: "";
     width: 58px;
     height: 58px;
     position: absolute;
-    top: 26px;
+    top: 35px;
     right: 0;
     background: @color-platinum-sedona url("../img/icons/icon-phone.svg") no-repeat center center;
   }
@@ -23,10 +27,23 @@
     width: 58px;
     height: 58px;
     position: absolute;
-    top: 26px;
+    top: 35px;
     right: 0;
     background: @color-platinum-sedona url("../img/icons/icon-mail.svg") no-repeat center center;
   }
+}
+
+.fieldset-contacts {
+  padding-bottom: 14px;
+
+  .feedback-form__legend {
+    margin-bottom: 15px;
+  }
+}
+
+.fieldset-contacts__label {
+  margin: 0 auto 0 22px;
+  padding-bottom: 9px;
 }
 
 
@@ -34,6 +51,11 @@
   .fieldset-contacts {
     display: flex;
     flex-direction: column;
+    padding-top: 1px;
+
+    .feedback-form__legend {
+      padding-bottom: 6px;
+    }
   }
 
   .fieldset-contacts__input {
@@ -43,10 +65,11 @@
   .fieldset-contacts__label {
     align-self: start;
     padding-left: 22px;
+    margin: 0;
   }
 
   .fieldset-contacts__line {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 }
 
@@ -54,10 +77,21 @@
   .fieldset-contacts {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 17px;
+
+    .feedback-form__legend {
+      width: 100%;
+      padding-bottom: 57px;
+    }
   }
 
   .fieldset-contacts__line {
     flex-direction: row;
+
+    input[type="text"] {
+      width: 317px;
+    }
 
     &--phone::after,
     &--email::after {
