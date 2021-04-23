@@ -1,8 +1,12 @@
 .page-catalog .intro {
   background-image: url("../img/background-small.jpg");
-  background-position: 50% 50%;
+  background-position: bottom;
   background-repeat: no-repeat;
-  min-height: 214px;
+  min-height: 156px;
+
+  .intro__logo {
+    margin-top: -8px;
+  }
 }
 
 @media (min-resolution: 2dppx) {
@@ -15,12 +19,13 @@
 @media (min-width: @tablet-width) {
   .page-catalog .intro {
     background-image: url("../img/background-middle.jpg");
-    min-height: 346px;
+    min-height: 290px;
   }
 
   .page-catalog .intro__logo {
     width: 457px;
     height: 78px;
+    margin-top: -12px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -34,7 +39,7 @@
 @media (min-width: @desktop-width) {
   .page-catalog .intro {
     background-image: url("../img/background-big.jpg");
-    min-height: 357px;
+    min-height: 300px;
   }
 
   @media (min-resolution: 2dppx) {

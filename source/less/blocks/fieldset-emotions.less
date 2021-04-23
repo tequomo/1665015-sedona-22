@@ -1,7 +1,11 @@
+.fieldset-emotions {
+  padding-bottom: 40px;
+}
+
 .fieldset-emotions__textarea {
   width: 280px;
   height: 160px;
-  padding: 13px 22px 29px;
+  padding: 8px 19px 29px;
   color: @color-black;
   font-family: @font-family;
   font-size: 18px;
@@ -18,7 +22,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .fieldset-emotions {
+    padding-bottom: 54px;
+  }
+
   .fieldset-emotions__textarea {
     width: 100%;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .fieldset-emotions {
+    .feedback-form__legend {
+      margin-top: 21px;
+    }
   }
 }

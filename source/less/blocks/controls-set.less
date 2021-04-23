@@ -1,14 +1,43 @@
-.controls-set__replay {
-  padding-left: 20px;
+.controls-set__replay,
+.controls-set__subtitles,
+.controls-set__fullscreen {
+  padding-top: 6px;
+}
 
-  &:hover path,
-  &:focus path {
+.controls-set__replay-icon,
+.controls-set__subtitles-icon,
+.controls-set__fullscreen-icon {
+  fill: @color-cadet;
+
+  &:hover,
+  &:focus {
     fill: @color-dark-charcoal;
   }
 
-  &:active path {
+  &:active {
     fill: @color-dark-charcoal-opacity;
   }
+}
+
+.controls-set__scale {
+  width: 235px;
+  height: 3px;
+  background-color: @color-white-shadow;
+  border-radius: 10%;
+  position: relative;
+}
+
+.controls-set__slider {
+  width: 9px;
+  height: 9px;
+  background-color: @color-white;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+}
+
+.controls-set__replay {
+  padding-left: 25px;
 }
 
 .controls-set__playbar {
@@ -18,10 +47,10 @@
   order: -1;
   flex-grow: 1;
   flex-basis: 100%;
-  // margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .controls-set__subtitles {
@@ -38,7 +67,7 @@
 }
 
 .controls-set__fullscreen {
-  padding-right: 20px;
+  padding-right: 23px;
   margin-left: 30px;
 
   &:hover path,
@@ -52,21 +81,27 @@
 }
 
 @media (min-width: @tablet-width) {
-  .controls-set__replay,
-  .controls-set__subtitles,
-  .controls-set__fullscreen {
-    & path {
-      fill: @color-white;
-    }
+  .controls-set__replay-icon,
+  .controls-set__subtitles-icon,
+  .controls-set__fullscreen-icon {
+    fill: @color-white;
 
-    &:hover path,
-    &:focus path {
+    &:hover,
+    &:focus {
       fill: @color-white-opacity-low;
     }
 
-    &:active path {
+    &:active {
       fill: @color-white-opacity;
     }
+  }
+
+  .controls-set__scale {
+    width: 389px;
+  }
+
+  .controls-set__slider {
+    left: 30%;
   }
 
   .controls-set__replay {
@@ -80,10 +115,6 @@
     background-color: @color-transparent;
     flex-grow: 0;
     flex-basis: auto;
-
-    & rect {
-      width: 389px;
-    }
 
     & svg:last-of-type {
       width: 389px;
@@ -108,15 +139,13 @@
     & rect {
       width: 540px;
     }
+  }
 
-    & svg:last-of-type {
-      width: 540px;
-      position: relative;
-    }
+  .controls-set__scale {
+    width: 540px;
+  }
 
-    & svg:first-of-type {
-      position: absolute;
-      left: 30%;
-    }
+  .controls-set__slider {
+    left: 21%;
   }
 }

@@ -1,5 +1,5 @@
 .features {
-  padding: 35px 20px;
+  padding: 35px 20px 10px;
 }
 
 .features__list {
@@ -10,7 +10,7 @@
 
 .features__item {
   text-align: left;
-  padding-left: 51px;
+  padding: 0 0 16px 51px;
   position: relative;
 
   &--living .features__header::before {
@@ -26,7 +26,7 @@
   &--present .features__header::before {
     position: absolute;
     top: -10px;
-    left: 2px;
+    left: 4px;
     content: "";
     width: 32px;
     height: 38px;
@@ -36,7 +36,7 @@
   &--meal .features__header::before {
     position: absolute;
     top: -6px;
-    left: -4px;
+    left: -3px;
     content: "";
     width: 40px;
     height: 35px;
@@ -48,7 +48,7 @@
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 }
 
 .features__desc {
@@ -56,9 +56,18 @@
   padding-bottom: 10px;
   color: @color-dark-charcoal;
   font-size: 14px;
+  line-height: 21px;
+
+  &--break {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    padding: 58px 20px 61px;
+  }
+
   .features__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,37 +78,55 @@
     padding: 100px 20px 0;
     position: relative;
 
-    &--living .features__header::before {
-      position: absolute;
-      top: 10px;
-      left: 35%;
-      content: "";
-      width: 75px;
-      height: 72px;
-      background-image: url("../img/icons/icon-house.svg");
-      background-size: cover;
+    &--living {
+      padding-right: 44px;
+
+      .features__header::before {
+        position: absolute;
+        top: 2px;
+        left: 29%;
+        content: "";
+        width: 75px;
+        height: 72px;
+        background-image: url("../img/icons/icon-house.svg");
+        background-size: cover;
+      }
     }
 
-    &--present .features__header::before {
-      position: absolute;
-      top: 10px;
-      left: 35%;
-      content: "";
-      width: 64px;
-      height: 75px;
-      background-image: url("../img/icons/icon-gift.svg");
-      background-size: cover;
+    &--present {
+      padding-left: 44px;
+
+      .features__header::before {
+        position: absolute;
+        top: 0;
+        left: 42%;
+        content: "";
+        width: 64px;
+        height: 75px;
+        background-image: url("../img/icons/icon-gift.svg");
+        background-size: cover;
+      }
+
+      .features__desc {
+        margin: 0 -8px;
+      }
     }
 
-    &--meal .features__header::before {
-      position: absolute;
-      top: 10px;
-      left: 35%;
-      content: "";
-      width: 76px;
-      height: 68px;
-      background-image: url("../img/icons/icon-burger.svg");
-      background-size: cover;
+    &--meal {
+      .features__header::before {
+        position: absolute;
+        top: 6px;
+        left: 34%;
+        content: "";
+        width: 76px;
+        height: 68px;
+        background-image: url("../img/icons/icon-burger.svg");
+        background-size: cover;
+      }
+
+      .features__desc {
+        margin: 0 25px;
+      }
     }
 
     &:nth-child(2) {
@@ -111,7 +138,7 @@
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
   }
 
   .features__desc {
@@ -122,6 +149,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .features {
+    padding: 59px 18px 62px;
+  }
+
   .features__header {
     padding: 0 20px;
   }
@@ -129,23 +160,33 @@
   .features__desc {
     font-size: 14px;
     line-height: 21px;
-    padding: 20px;
+    padding: 21px;
+
+    &--break {
+      display: block;
+    }
   }
 
   .features__item {
     &--living .features__header::before {
-      top: 10px;
-      left: 40%;
+      top: 0;
+      left: 37%;
     }
 
     &--present .features__header::before {
-      top: 10px;
-      left: 42%;
+      top: -4px;
+      left: 44%;
     }
 
-    &--meal .features__header::before {
-      top: 10px;
-      left: 40%;
+    &--meal {
+      .features__header::before {
+        top: 3px;
+        left: 40%;
+      }
+
+      .features__desc {
+        margin: 0 10px;
+      }
     }
   }
 }

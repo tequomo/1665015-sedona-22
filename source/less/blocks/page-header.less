@@ -1,8 +1,14 @@
 .page-header {
   min-height: 56px;
-  margin-bottom: -28px;
+  // margin-bottom: -36px;
   position: relative;
   z-index: 1;
+  padding-bottom: 56px;
+}
+
+.page-header__logo {
+  position: absolute;
+  transform: translate(-50%);
 }
 
 .page-header__logo-image {
@@ -12,6 +18,7 @@
 @media (min-width: @tablet-width) {
   .page-header {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .page-header__logo {

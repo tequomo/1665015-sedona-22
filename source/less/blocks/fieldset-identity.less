@@ -1,7 +1,7 @@
 .fieldset-identity__line {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   display: flex;
   width: 280px;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .fieldset-identity__label {
-  padding-right: 15px;
+  padding: 3px 15px 0 0;
 }
 
 
@@ -22,14 +22,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    .feedback-form__legend {
+      align-self: flex-start;
+      padding: 0 0 35px 58px;
+    }
   }
 
   .fieldset-identity__line {
     width: 266px;
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .fieldset-identity {
+    .feedback-form__legend {
+      padding-left: 80px;
+    }
+  }
+
   .fieldset-identity__line {
     width: 400px;
   }
