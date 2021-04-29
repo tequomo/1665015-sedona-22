@@ -1,11 +1,21 @@
 .modal-failure {
   box-shadow: 0 7px 15px @color-drop-shadow;
   display: none;
+  position: absolute;
+  top: 1263px;
+  left: 0;
+  width: 320px;
+  background-color: @color-white;
 }
 
 .modal-failure__header {
   margin: 0;
-  padding: 40px 42px 22px;
+  padding: 40px 42px 25px;
+
+  .section-title__content {
+    padding-top: 11px;
+    line-height: 24px;
+  }
 }
 
 .modal-failure__button-container {
@@ -17,6 +27,7 @@
   width: 180px;
   height: 58px;
   font-family: @font-family;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
@@ -28,9 +39,35 @@
 }
 
 @media (min-width: @tablet-width) {
+  .modal-failure {
+    width: 400px;
+    top: 1374px;
+    left: 184px;
+  }
+
   .modal-failure__header {
+    padding: 50px 42px 37px;
+
     .section-title__header {
       font-size: 30px;
+      line-height: 40px;
+      margin: 0 40px;
     }
+  }
+
+  .modal-failure__button-container {
+    padding: 0 64px 49px;
+  }
+
+  .modal-failure__button {
+    width: 272px;
+    padding-top: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-failure {
+    left: 400px;
+    top: 1334px;
   }
 }
