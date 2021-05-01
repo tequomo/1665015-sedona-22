@@ -1,11 +1,21 @@
 .modal-success {
   box-shadow: 0 7px 15px @color-drop-shadow;
   display: none;
+  position: absolute;
+  width: 320px;
+  top: 1587px;
+  left: 0;
+  background-color: @color-white;
+
+  .section-title__content {
+    padding-top: 12px;
+    line-height: 24px;
+  }
 }
 
 .modal-success__header {
   margin: 0;
-  padding: 38px 38px 29px;
+  padding: 41px 38px 39px;
 }
 
 .modal-success__button-container {
@@ -17,8 +27,10 @@
 .modal-success__button {
   width: 280px;
   height: 58px;
+  padding-top: 5px;
   font-family: @font-family;
-  font-size: 21px;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
@@ -29,9 +41,44 @@
 }
 
 @media (min-width: @tablet-width) {
+  .modal-success {
+    width: 640px;
+    left: 64px;
+    top: 1214px;
+  }
+
   .modal-success__header {
+    padding: 52px 30px 44px;
+
     .section-title__header {
       font-size: 30px;
+    }
+
+    .section-title__content {
+      padding-top: 17px;
+    }
+  }
+
+  .modal-success__button-container {
+    padding: 44px 91px;
+  }
+
+  .modal-success__button {
+    width: 458px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-success {
+    width: 640px;
+    left: 280px;
+    top: 1063px;
+  }
+
+  .modal-success__header {
+    .section-title__content {
+      padding-top: 19px;
     }
   }
 }

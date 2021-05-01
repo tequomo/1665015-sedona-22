@@ -10,12 +10,14 @@
   <link rel="apple-touch-icon" href="img/icons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
   <div class="container">
     <header class="page-header">
-      <nav class="navigation navigation--opened navigation--nojs">
+      <nav class="navigation navigation--nojs">
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -39,8 +41,10 @@
               </a>
             </li>
           </ul>
-          <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть
-              меню</span></button>
+          <button class="navigation__toggle" type="button" tabindex="1">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="navigation__toggle-icon"></span>
+          </button>
         </div>
       </nav>
       <a class="page-header__logo" href="index.html">
@@ -75,15 +79,18 @@
               <p class="feedback-form__legend">Представьтесь:</p>
               <p class="fieldset-identity__line">
                 <label class="fieldset-identity__label" for="identity-forename">Имя*:</label>
-                <input class="fieldset-identity__input" type="text" id="identity-forename" placeholder="Петр">
+                <input class="fieldset-identity__input" type="text" id="identity-forename" name="identity-forename"
+                  placeholder="Петр">
               </p>
               <p class="fieldset-identity__line">
                 <label class="fieldset-identity__label" for="identity-surname">Фамилия*:</label>
-                <input class="fieldset-identity__input" type="text" id="identity-surname" placeholder="Иванов">
+                <input class="fieldset-identity__input" type="text" id="identity-surname" name="identity-surname"
+                  placeholder="Иванов">
               </p>
               <p class="fieldset-identity__line">
                 <label class="fieldset-identity__label" for="identity-middlename">Отчество:</label>
-                <input class="fieldset-identity__input" type="text" id="identity-middlename" placeholder="Алексанрович">
+                <input class="fieldset-identity__input" type="text" id="identity-middlename" name="identity-middlename"
+                  placeholder="Алексанрович">
               </p>
             </fieldset>
             <fieldset class="feedback-form__fieldset fieldset-contacts">
@@ -91,12 +98,14 @@
               <p class="fieldset-contacts__line fieldset-contacts__line--phone">
                 <label class="fieldset-contacts__label fieldset-contacts__label--phone" for="contacts-phone"><span
                     class="fieldset-contacts__hidden">Контактный </span>телефон*:</label>
-                <input class="fieldset-contacts__input" type="text" id="contacts-phone" placeholder="Введите телефон">
+                <input class="fieldset-contacts__input" type="tel" id="contacts-phone" name="contacts-phone"
+                  placeholder="Введите телефон">
               </p>
               <p class="fieldset-contacts__line fieldset-contacts__line--email">
                 <label class="fieldset-contacts__label fieldset-contacts__label--email" for="contacts-mail">Электронная
                   почта*:</label>
-                <input class="fieldset-contacts__input" type="text" id="contacts-mail" placeholder="Введите e-mail">
+                <input class="fieldset-contacts__input" type="email" id="contacts-mail" name="contacts-mail"
+                  placeholder="Введите e-mail">
               </p>
             </fieldset>
             <fieldset class="feedback-form__fieldset fieldset-impression">
@@ -104,17 +113,17 @@
               <div class="fieldset-impression__block">
                 <p class="fieldset-impression__line">
                   <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-positive"
-                    name="fieldset-impression" value="impression-positive" checked>
+                    name="impression" value="impression-positive" checked>
                   <label for="impression-positive">Скорее положительное</label>
                 </p>
                 <p class="fieldset-impression__line">
                   <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-negative"
-                    name="fieldset-impression" value="impression-negative">
+                    name="impression" value="impression-negative">
                   <label for="impression-negative">Скорее отрицательное</label>
                 </p>
                 <p class="fieldset-impression__line">
                   <input class="visually-hidden fieldset-impression__radio" type="radio" id="impression-not-sure"
-                    name="fieldset-impression" value="impression-not-sure">
+                    name="impression" value="impression-not-sure">
                   <label for="impression-not-sure">Затрудняюсь ответить</label>
                 </p>
               </div>
@@ -157,7 +166,8 @@
       <section class="modal-success">
         <header class="modal-success__header section-title">
           <h2 class="section-title__header">Ваш отзыв отправлен!</h2>
-          <p class="section-title__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+          <p class="section-title__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время
+            мы
             опубликуем его на сайте.
           </p>
         </header>
@@ -219,6 +229,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

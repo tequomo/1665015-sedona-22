@@ -10,12 +10,14 @@
   <link rel="apple-touch-icon" href="img/icons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
   <div class="container">
     <header class="page-header">
-      <nav class="navigation navigation--opened navigation--nojs">
+      <nav class="navigation navigation--nojs">
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item navigation__item--current">
@@ -39,7 +41,10 @@
               </a>
             </li>
           </ul>
-          <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="navigation__toggle" type="button" tabindex="1">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="navigation__toggle-icon"></span>
+          </button>
         </div>
       </nav>
       <a class="page-header__logo">
@@ -77,11 +82,14 @@
                 <p class="advantages__slogan">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <picture class="advantages__picture">
-                <source type="image/webp" srcset="img/photos/city-photo-big.webp 1x, img/photos/city-photo-big@2x.webp 2x"
+                <source type="image/webp"
+                  srcset="img/photos/city-photo-big.webp 1x, img/photos/city-photo-big@2x.webp 2x"
                   media="(min-width: 1200px)">
-                <source type="image/webp" srcset="img/photos/city-photo-middle.webp 1x, img/photos/city-photo-middle@2x.webp 2x"
+                <source type="image/webp"
+                  srcset="img/photos/city-photo-middle.webp 1x, img/photos/city-photo-middle@2x.webp 2x"
                   media="(min-width: 768px)">
-                <source type="image/webp" srcset="img/photos/city-photo-small.webp 1x, img/photos/city-photo-small@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photos/city-photo-small.webp 1x, img/photos/city-photo-small@2x.webp 2x">
                 <source srcset="img/photos/city-photo-big.jpg 1x, img/photos/city-photo-big@2x.jpg 2x"
                   media="(min-width: 1200px)">
                 <source srcset="img/photos/city-photo-middle.jpg 1x, img/photos/city-photo-middle@2x.jpg 2x"
@@ -113,17 +121,21 @@
                 <p class="advantages__slogan">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <picture class="advantages__picture">
-                <source type="image/webp" srcset="img/photos/bridge-photo-big.webp 1x, img/photos/bridge-photo-big@2x.webp 2x"
+                <source type="image/webp"
+                  srcset="img/photos/bridge-photo-big.webp 1x, img/photos/bridge-photo-big@2x.webp 2x"
                   media="(min-width: 1200px)">
-                <source type="image/webp" srcset="img/photos/bridge-photo-middle.webp 1x, img/photos/bridge-photo-middle@2x.webp 2x"
+                <source type="image/webp"
+                  srcset="img/photos/bridge-photo-middle.webp 1x, img/photos/bridge-photo-middle@2x.webp 2x"
                   media="(min-width: 768px)">
-                <source type="image/webp" srcset="img/photos/bridge-photo-small.webp 1x, img/photos/bridge-photo-small@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photos/bridge-photo-small.webp 1x, img/photos/bridge-photo-small@2x.webp 2x">
                 <source srcset="img/photos/bridge-photo-big.jpg 1x, img/photos/bridge-photo-big@2x.jpg 2x"
                   media="(min-width: 1200px)">
                 <source srcset="img/photos/bridge-photo-middle.jpg 1x, img/photos/bridge-photo-middle@2x.jpg 2x"
                   media="(min-width: 768px)">
                 <img class="advantages__photo" src="img/photos/bridge-photo-small.jpg"
-                  srcset="img/photos/bridge-photo-small@2x.jpg 2x" width="320" height="260" alt="Вид на Мост дьявола">
+                  srcset="img/photos/bridge-photo-small@2x.jpg 2x" loading="lazy" width="320" height="260"
+                  alt="Вид на Мост дьявола">
               </picture>
             </li>
             <li class="advantages__item">
@@ -210,6 +222,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
