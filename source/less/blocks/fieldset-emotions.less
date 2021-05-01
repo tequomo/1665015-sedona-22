@@ -1,11 +1,15 @@
 .fieldset-emotions {
-  padding-bottom: 40px;
+  padding-bottom: 43px;
+
+  .feedback-form__legend {
+    margin-bottom: 15px;
+  }
 }
 
 .fieldset-emotions__textarea {
   width: 280px;
   height: 160px;
-  padding: 8px 19px 29px;
+  padding: 8px 16px 29px;
   color: @color-black;
   font-family: @font-family;
   font-size: 18px;
@@ -40,8 +44,8 @@
 
   .fieldset-emotions__textarea {
     width: 100%;
-    padding-top: 20px;
-    padding-left: 21px;
+    padding-top: 16px;
+    padding-left: 18px;
   }
 }
 
@@ -49,7 +53,17 @@
   .fieldset-emotions {
     .feedback-form__legend {
       margin-top: 21px;
-      padding-bottom: 34px;
+      padding-bottom: 40px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-emotions {
+    padding-bottom: 50px;
+  }
+
+  .fieldset-emotions__textarea {
+    padding: 13px 17px;
   }
 }

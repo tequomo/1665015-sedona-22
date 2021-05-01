@@ -1,15 +1,23 @@
-const navigationMenu = document.querySelector (".navigation");
-const navigationButton = document.querySelector (".navigation__toggle");
-const navigationList = document.querySelector (".navigation__list");
+const navigationButton = document.querySelector(".navigation__toggle");
+const navigationList = document.querySelector(".navigation__list");
+const navigationMenu = document.querySelector(".navigation");
+const navigationItem = document.querySelector(".navigation__link");
+const bookingSearchButton = document.querySelector(".booking-search__button");
 
-navigationButton.addEventListener("click", function(evt){
-  evt.preventDefault();
-  if (navigationButton.classList.contains()){
-    navigationButton.classList.add();
-    navigationButton.classList.remove();
-    navigationMenu.classList.add();
-  } else {
-    navigationMenu.classList.remove()
-    navigationButton.classList.add();
+navigationButton.onclick = function() {
+  navigationMenu.classList.toggle("navigation--opened");
+  navigationList.classList.toggle("navigation__list--visible");
+  if (navigationList.classList.contains("navigation__list--visible")) {
+    navigationItem.focus();
   }
-})
+};
+
+if(bookingSearchButton) {
+  bookingSearchButton.onclick = function() {
+    window.open("https://google.com");
+  }
+}
+
+window.onload = function() {
+  navigationMenu.classList.remove("navigation--nojs");
+}

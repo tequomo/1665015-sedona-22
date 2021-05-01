@@ -23,7 +23,9 @@
     border-bottom: none;
   }
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
     font-family: inherit;
     font-size: 18px;
     line-height: inherit;
@@ -75,6 +77,20 @@
   vertical-align: middle;
   background-color: @color-dark-sky-blue;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @color-cerulean-frost;
+  }
+
+  &:active {
+    background-color: @color-silver-lake-blue;
+    color: @color-white-opacity;
+  }
+
+  &:disabled {
+    background-color: @color-platinum-vip;
+  }
 }
 
 .feedback-form__info {
