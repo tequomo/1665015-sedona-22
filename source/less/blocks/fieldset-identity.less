@@ -9,13 +9,19 @@
 }
 
 .fieldset-identity__input {
+  background-color: @color-anti-flash-white;
+  border: 4px solid @color-anti-flash-white;
   width: 100%;
+
+  &--error {
+    background-color: @color-pale-pink;
+    border-color: @color-vivid-tangerin;
+  }
 }
 
 .fieldset-identity__label {
   padding: 3px 15px 0 0;
 }
-
 
 @media (min-width: @tablet-width) {
   .fieldset-identity {

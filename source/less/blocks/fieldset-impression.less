@@ -56,6 +56,20 @@
     border-color: @color-light-gray;
   }
 
+  &:disabled {
+    & + label::before,
+    &:checked + label::before {
+      background-color: @color-granite-gray;
+      border-color: @color-granite-gray;
+    }
+
+    & + label::after,
+    &:checked + label::after {
+      background-color: @color-white;
+      border-color: @color-white;
+    }
+  }
+
   & + label::after,
   &:checked + label::after {
     content: "";

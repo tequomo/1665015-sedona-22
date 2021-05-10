@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 24px 20px;
+  padding: 24px 20px 16px;
 }
 
 .page-footer__hashtag {
@@ -40,7 +40,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     background-color: @color-white;
-    padding: 34px 60px;
+    padding: 34px 60px 29px;
   }
 
   .page-footer__wrapper {
@@ -49,8 +49,12 @@
     justify-content: space-between;
   }
 
+  .page-footer__hashtag {
+    margin: 0;
+  }
+
   .page-footer__copyright {
-    padding: 0 0 7px;
+    padding: 8px 0 0;
   }
 
   .page-footer__desc {
@@ -61,5 +65,13 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     padding: 32px 120px;
+  }
+
+  .page-footer__hashtag {
+    margin-top: 3px;
+  }
+
+  .page-footer__copyright {
+    padding: 12px 0 0;
   }
 }

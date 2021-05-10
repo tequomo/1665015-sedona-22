@@ -1,7 +1,22 @@
-.controls-set__replay,
-.controls-set__subtitles,
+.controls-set button {
+  border: none;
+  height: 20px;
+  background-color: @color-transparent;
+}
+
+.controls-set__replay {
+  padding: 0;
+  margin: 0 6px 0 25px;
+}
+
+.controls-set__subtitles {
+  padding: 0;
+  margin-left: auto;
+}
+
 .controls-set__fullscreen {
-  padding-top: 6px;
+  padding: 0;
+  margin: 0 23px 0 30px;
 }
 
 .controls-set__replay-icon,
@@ -36,10 +51,6 @@
   left: 20%;
 }
 
-.controls-set__replay {
-  padding-left: 25px;
-}
-
 .controls-set__playbar {
   width: 280px;
   height: 45px;
@@ -51,33 +62,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-}
-
-.controls-set__subtitles {
-  margin-left: auto;
-
-  &:hover path,
-  &:focus path {
-    fill: @color-dark-charcoal;
-  }
-
-  &:active path {
-    fill: @color-dark-charcoal-opacity;
-  }
-}
-
-.controls-set__fullscreen {
-  padding-right: 23px;
-  margin-left: 30px;
-
-  &:hover path,
-  &:focus path {
-    fill: @color-dark-charcoal;
-  }
-
-  &:active path {
-    fill: @color-dark-charcoal-opacity;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -105,7 +89,8 @@
   }
 
   .controls-set__replay {
-    padding: 0 40px 0 0;
+    padding: 0;
+    margin: 0 40px 0 0;
   }
 
   .controls-set__playbar {
@@ -128,7 +113,7 @@
   }
 
   .controls-set__fullscreen {
-    padding-right: 0;
+    margin: 0 0 0 30px;
   }
 }
 
