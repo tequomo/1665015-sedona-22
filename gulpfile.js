@@ -60,7 +60,10 @@ exports.scripts = scripts;
 // Optimize Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg,svg}",
+    "!source/img/icons/pic/*.svg"
+  ])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.mozjpeg({quality: 90, progressive: true}),
@@ -83,8 +86,7 @@ exports.copyImages = copyImages;
 
 const createWebP = () => {
   return gulp.src([
-    "source/img/**/*.{jpg,png}",
-    "!source/img/icons/*.png"
+    "source/img/**/*.{jpg,png}"
   ])
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"));
@@ -108,7 +110,7 @@ const sprite = () => {
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build/img/icons"));
 }
 
 exports.sprite = sprite;
@@ -118,8 +120,8 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff,woff2}",
-    "source/*.ico",
-    "source/manifest.webmanifest"
+    "source/img/icons/*.ico",
+    "source/css/*.css"
   ], {
     base: "source"
   })
@@ -161,7 +163,7 @@ const watcher = () => {
 
 // Build
 
-exports.build = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -174,9 +176,11 @@ exports.build = gulp.series(
   )
 )
 
-// Default
+exports.build = build;
 
-exports.default = gulp.series(
+// Lite start
+
+exports.litestart = gulp.series(
   clean,
   copy,
   copyImages,
@@ -187,6 +191,16 @@ exports.default = gulp.series(
     sprite,
     createWebP
   ),
+  gulp.series(
+    server,
+    watcher
+  )
+);
+
+// Default
+
+exports.default = gulp.series(
+  build,
   gulp.series(
     server,
     watcher

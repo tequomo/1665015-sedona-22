@@ -32,7 +32,8 @@
     "styles": "gulp styles",
     "html": "gulp html",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "litestart": "litestart"
   },
   "browserslist": [
     "last 2 versions",
