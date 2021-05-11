@@ -32,56 +32,39 @@ if (bookingSearchButton) {
 // Form validation
 
 // Functions
-// const ESCHandler = (evt) => closeEsc(evt, modalFailure, removeColors, fieldFocus);
-// const ESCHandler2 = (evt) => closeEsc(evt, modalSuccess);
 
-const ESCHandler = (evt, err) => {
-  evt.stopPropagation();
-  const keyCode = evt.keyCode || evt.which;
-  if (keyCode === 27) {
-    if (err) {
-      modalFailure.classList.remove(modalFailure.classList[1]);
-      removeColors();
-      fieldFocus();
-      // document.removeEventListener("keydown", ESCHandler(evt, err));
-    }
-    else {
-      modalSuccess.classList.remove(modalSuccess.classList[1]);
-      // document.removeEventListener("keydown", ESCHandler(evt, err));
+function closeOnEsc(elem, err) {
+  function ESCHandler(event) {
+    const keyCode = event.keyCode || event.which;
+    if (keyCode === 27) {
+      elem.classList.remove(elem.classList[1]);
+      if (err) {
+        removeColors();
+        fieldFocus();
+      }
+      document.removeEventListener("keydown", ESCHandler, false);
     }
   }
+  document.addEventListener("keydown", ESCHandler, false);
+  event.stopPropagation();
 }
 
-const setFocus = (elem) => {
+
+function setFocus(elem) {
   elem.setAttribute("tabindex", "0");
   elem.focus();
 }
 
-function closeEsc(event, obj, func, fn) {
-  console.log(event);
-  const keyCode = event.keyCode || event.which;
-  if (keyCode === 27) {
-    obj.classList.remove(obj.classList[1]);
-    event.preventDefault();
-    if (func) {
-      func();
-    }
-    if (fn) {
-      fn();
-    }
-  }
-  document.removeEventListener("keydown", ESCHandler);
-}
-
-function closeOnClick(elem) {
+function closeOnClick(elem, err) {
   function outsideClickListener(event) {
     // check click is outside of element and element is visible
     if (!elem.contains(event.target) && isVisible(elem)) {
       elem.classList.remove(elem.classList[1]);
-      removeColors();
-      fieldFocus();
+      if (err) {
+        removeColors();
+        fieldFocus();
+      }
       document.removeEventListener("click", outsideClickListener, false);
-      document.removeEventListener("keydown", evt => ESCHandler(evt, err), false);
     }
   }
   document.addEventListener("click", outsideClickListener, false);
@@ -138,9 +121,11 @@ if (formButton) {
       // set focus on modal window
       setFocus(modalFailure);
       // add ESC catcher
-      document.addEventListener("keydown", evt => ESCHandler(evt, error), false);
+      closeOnEsc(modalFailure, error);
+      // document.addEventListener("keydown", evt => ESCHandler(evt, error), false);
       // close modal window on click outside it
-      closeOnClick(modalFailure);
+      closeOnClick(modalFailure, error);
+      return false;
     }
     else {
       // show success modal window
@@ -152,9 +137,10 @@ if (formButton) {
       // reset form
       wholeForm.reset();
       // add ESC catcher
-      document.addEventListener("keydown", evt => ESCHandler(evt, error), false);
+      closeOnEsc(modalSuccess, error);
+      // document.addEventListener("keydown", evt => ESCHandler(evt, error), false);
       // close modal window on click outside it
-      closeOnClick(modalSuccess);
+      closeOnClick(modalSuccess, error);
     }
   }
 
