@@ -8,6 +8,9 @@
     .navigation__list {
       display: flex;
       flex-direction: column;
+      visibility: visible;
+      opacity: 1;
+      height: 224px;
     }
 
     .navigation__toggle {
@@ -104,8 +107,6 @@
   transition: height 0.5s, visibility 0.5s, opacity 0.5s linear;
 
   &--visible {
-    // display: flex;
-    // flex-direction: column;
     display: block;
     visibility: visible;
     opacity: 1;
@@ -119,6 +120,7 @@
     height: 7px;
     background: linear-gradient(180deg, @color-black-opacity-bulk 0%, @color-black-opacity-shadow 100%);
     margin-top: -7px;
+    display: block;
   }
 }
 
@@ -179,6 +181,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        height: auto;
       }
     }
   }
